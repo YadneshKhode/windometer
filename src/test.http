@@ -1,0 +1,44 @@
+// WIND APIs
+
+POST http://localhost:3000/winddata/save
+Content-Type: application/json
+
+{
+   "district":"Ambernath",
+   "speed":"54",
+   "sourceDirection":"North-East",
+   "destinationDirection": "South-West",
+   "date": "2020-08-12 00:00:00",
+   "latitude":"67",
+   "longitude":"90"
+}
+
+###
+
+GET http://localhost:3000/winddata/getAllWindData
+
+###
+
+//timeStart and timeEnd are not handled right now
+GET http://localhost:3000/winddata/getAverageWindSpeed?district=thane&sourceDirection=North&destinationDirection=South&timeStart=%272022-08-20%2000:00:00%27&timeEnd=%272022-08-30%2000:00:00%27
+
+###
+
+//DISTRICT APIs
+
+GET http://localhost:3000/districtdata/getAllDistrictData
+
+###
+
+GET http://localhost:3000/districtdata/getAllDistrictList
+
+###
+
+POST http://localhost:3000/districtdata/save
+Content-Type: application/json
+
+{
+   "name":"Newyork",
+   "coordinates":"12,34,54,32"
+}
+###
